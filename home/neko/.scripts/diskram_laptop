@@ -1,0 +1,2 @@
+#!/bin/bash -norc
+echo "HDD: $(df -H /dev/nvme1n1p2 --output=used |grep G | cut -c2-4)/$(df -H /dev/nvme1n1p2 --output=size | grep G | cut -c2-4)GB" ; echo "RAM:   $(free --giga | grep Mem: | cut -c 31-32)/$(free --giga | grep Mem: | cut -c 19-20)GB"
