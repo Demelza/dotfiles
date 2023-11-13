@@ -1,0 +1,5 @@
+#!/bin/bash -norc
+dd=`date +"%H:%M:%S"`
+tt=`date +"%e/%m/%Y"`
+
+echo " $dd" ; echo "$tt "
