@@ -1,0 +1,8 @@
+[Unit]
+Description=Nvidia dGPU fix
+
+[Service]
+ExecStart=/usr/bin/nvidia_fix.sh
+
+[Install]
+WantedBy=multi-user.target
