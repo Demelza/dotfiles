@@ -1,0 +1,3 @@
+#!/bin/bash -norc
+nvidia_in_use=`cat /sys/bus/pci/devices/0000:01:00.0/power/runtime_status`
+echo "CPU:$(sensors -u *-isa-0000 | grep temp2_input: | cut -c15-17)°C" ; echo "GPU: $([ $nvidia_in_use == "active" ] && echo "`nvidia-settings -q gpucoretemp | sed -n '2p' | cut -d ' ' -f 6 | cut -c 1-2`°C" || echo iGPU)"
